@@ -32,6 +32,10 @@ app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/services", serviceRoutes);
 app.use("/api/v1/contact", contactRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Portfolio Backend is live!");
+});
+
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
